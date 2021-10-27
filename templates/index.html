@@ -6,7 +6,8 @@
         <h1>My orders list</h1>
         {% for order in orders %}
         <div>
-            {{ order.customer_name }}: {{order.book_titles}}: {{order.quantity}}
+            {{ order.customer_name }}: {{ order.book_titles }}: {{ order.quantity }} 
+            <a href="/orders/{{ orders.index(order) }}">Click here to view order details</a>
         </div>
         {% endfor %}
     </body>
